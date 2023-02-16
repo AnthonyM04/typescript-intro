@@ -2,7 +2,6 @@ let firstName: string = "Anthony"
 let age: number = 1800
 let teaching: boolean = false
 
-
 let classes: string[] = ["typescript", "c#", "presenting"]
 
 // console.log(firstName, age, teaching);
@@ -18,7 +17,6 @@ enum TaxesForms {
 //console.log(TaxesForms.standardtaxes);
 
 let code: string | number = "11";
-
 code = 1
 
 console.log(code);
@@ -38,14 +36,34 @@ function findIndex2(index: number, array: string[]) : void {
 }
 
 //console.log(findIndex2(1, cars));
-
 //findIndex2(1, cars)
 
-let classroom: any = {
-    name: "Classroom",
-    duration: "8 hours",
-    boring: false
+// let classroom: any = {
+//     name: "Classroom",
+//     duration: 6,
+//     boring: false,
+//     room: "big classroom"
+// }
 
+interface classroom {
+    name: string, //required
+    duration: number, //required
+    boring: boolean , // required
+    room?: string // ? is optional
 }
 
-console.log(classroom)
+let thisClassroom: classroom = {
+    name: "typescript",
+    duration: 6,
+    boring: false,
+    room: "big classroom"
+}
+
+//console.log(thisClassroom)
+
+let thatClassroom: classroom = {
+    name: "javascript 2.0",
+    duration: 2,
+    boring: true
+
+}
